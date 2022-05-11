@@ -1,21 +1,43 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import styled from 'styled-components/native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+const Page = styled.SafeAreaView`
+  flex:1;
+`;
+
+const Header = styled.View`
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color:#eee;
+  height:200px ;
+`;
+
+const Quadrado = styled.View`
+  width:50px;
+  height:50px;
+  background-color:${props=>props.cor}
+`;
+
+
+export default()=>{
+  return(
+    <Page>
+      <Header>
+        <Quadrado cor="red"></Quadrado>
+        <Quadrado cor="green" style={{alignSelf:'flex-start'}}></Quadrado>
+        <Quadrado cor="blue"></Quadrado>
+        <Quadrado cor="pink"></Quadrado>
+        <Quadrado cor="red"></Quadrado>
+        <Quadrado cor="green"></Quadrado>
+        <Quadrado cor="blue"></Quadrado>
+        <Quadrado cor="pink"></Quadrado>
+        <Quadrado cor="pink"></Quadrado>
+        <Quadrado cor="red"></Quadrado>
+        <Quadrado cor="green"></Quadrado>
+        <Quadrado cor="blue"></Quadrado>
+      </Header>
+    </Page>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
