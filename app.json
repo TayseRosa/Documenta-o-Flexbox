@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "baseTesteTayse",
+    "slug": "baseTesteTayse",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "baseTesteTayse"
+}
